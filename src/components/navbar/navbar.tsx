@@ -1,0 +1,48 @@
+"use client";
+
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { HomeIcon, Trophy, PlusIcon } from "lucide-react";
+
+export default function Navbar() {
+  const pathname = usePathname();
+
+  const navlinks = [
+    { href: "/homefeed", label: "Home", icon: <HomeIcon size={15} /> },
+    {
+      href: "/create_meme",
+      label: "Create Meme",
+      icon: <PlusIcon size={15} />,
+    },
+    { href: "/leaderboard", label: "Leaderboard", icon: <Trophy size={15} /> },
+  ];
+
+  return (
+    <nav className="flex gap-1 p-4 bg-background backdrop-blur-md text-white ">
+      {navlinks.map((link) => (
+        <Link
+          key={link.href}
+          href={link.href}
+          className={`${
+            link.href === "/homefeed"
+              ? pathname === "/" || pathname.startsWith("/homefeed")
+                ? "bg-accent-orange text-black"
+                : "hover:bg-background-two hover:text-orange-200"
+              : link.href === "/leaderboard"
+              ? pathname.startsWith("/leaderboard")
+                ? "bg-accent-blue text-black"
+                : "hover:bg-background-two hover:text-blue-200"
+              : link.href === "/create_meme"
+              ? pathname.startsWith("/create_meme")
+                ? "bg-accent-pink text-black"
+                : "hover:bg-background-two hover:text-pink-200"
+              : ""
+          } flex flex-row items-center gap-2 p-2`}
+        >
+          <div>{link.icon}</div>
+          <div>{link.label}</div>
+        </Link>
+      ))}
+    </nav>
+  );
+}

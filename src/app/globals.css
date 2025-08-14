@@ -1,26 +1,79 @@
 @import "tailwindcss";
 
+/* Default theme → Dark mode */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+  --background: #222831;
+  --foreground: #f5f5f5;
+  --background-two: #333c49;
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
+  /* Accents */
+  --accent-red: #ff5e57; /* Reaction highlights */
+  --accent-red-light: #ff8c87; /* Lighter reaction highlights */
+  --accent-blue: #00cfff; /* Links/tags */
+  --accent-blue-light: #4ddbff; /* Lighter links/tags */
+  --accent-orange: #ff9f43; /* Main highlights */
+  --accent-orange-light: #ffbb73; /* Lighter main highlights */
+  --accent-yellow: #ffd600; /* Secondary highlight */
+  --accent-yellow-light: #ffe34d; /* Lighter secondary highlight */
+  --accent-pink: #ff6b81; /* Original pink */
+  --accent-pink-light: #ff94a3; /* Lighter pink */
+
+  /* Typography */
+  --heading: #ffffff; /* Titles/headings */
+  --body: #d1d1d1; /* Regular text */
+  --muted: #9ca3af; /* Secondary text */
+  --link: var(--accent-blue);
+
+  /* Fonts */
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
+@theme inline {
+  /* Backgrounds & foregrounds */
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-background-two: var(--background-two);
+
+  /* Accents */
+  --color-accent-yellow: var(--accent-yellow);
+  --color-accent-yellow-light: var(--accent-yellow-light);
+  --color-accent-red: var(--accent-red);
+  --color-accent-red-light: var(--accent-red-light);
+  --color-accent-blue: var(--accent-blue);
+  --color-accent-blue-light: var(--accent-blue-light);
+  --color-accent-orange: var(--accent-orange);
+  --color-accent-orange-light: var(--accent-orange-light);
+  --color-accent-pink: var(--accent-pink);
+  --color-accent-pink-light: var(--accent-pink-light);
+
+  /* Typography colors */
+  --color-heading: var(--heading);
+  --color-body: var(--body);
+  --color-muted: var(--muted);
+  --color-link: var(--link);
+
+  /* Fonts */
+  --font-sans: var(--font-sans);
+  --font-mono: var(--font-mono);
+}
+
+/* Light mode if user's system prefers it */
+@media (prefers-color-scheme: light) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #ffffff;
+    --foreground: #171717;
+
+    /* Typography for light mode */
+    --heading: #000000;
+    --body: #333333;
+    --muted: #6b7280;
+    --link: var(--accent-blue);
   }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
 }
