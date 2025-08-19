@@ -14,10 +14,13 @@ const CreateMemeSection = () => {
   ];
   return (
     <div className="p-8">
-      <h1 className="text-2xl font-bold mb-4">Create Meme</h1>
+      <h1 className="inline-block text-4xl font-semibold mb-4 bg-gradient-to-r from-[#ff6b81] to-[#ff5e57] bg-clip-text text-transparent">
+        Create Meme
+      </h1>
+
       <div className="grid grid-cols-2 gap-4">
         <div className="col-span-1">
-          <div className="flex flex-row bg-background-two/50 p-1 gap-1">
+          <div className="flex flex-row bg-background-two/50 p-1 gap-1 border border-white/10">
             {tabs.map((tab) => (
               <button
                 key={tab.id}
@@ -35,7 +38,7 @@ const CreateMemeSection = () => {
               </button>
             ))}
           </div>
-          <div className="mt-2 bg-background-two/40 p-4 border border-white/10">
+          <div className="mt-3 bg-background-two/40 p-4 border border-white/10">
             {activeTab === "Image" && <UploadImage />}
             {activeTab === "Text" && <MemeText />}
             {activeTab === "Details" && <MemeDetails />}

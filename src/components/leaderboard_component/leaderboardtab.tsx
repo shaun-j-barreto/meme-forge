@@ -26,7 +26,7 @@ export default function LeaderboardTab() {
   ];
 
   return (
-    <nav className="flex gap-1 p-4 bg-background text-white ">
+    <nav className="flex gap-1 p-4 bg-background text-white justify-center items-center">
       {homelinks.map((link) => (
         <Link
           key={link.href}

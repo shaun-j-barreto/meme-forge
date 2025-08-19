@@ -6,7 +6,7 @@ export default function LeaderboardLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div>
+    <div className="mt-20">
       <LeaderboardTab />
       {children}
     </div>

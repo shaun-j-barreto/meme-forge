@@ -18,7 +18,7 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className="flex gap-1 p-4 bg-background backdrop-blur-md text-white ">
+    <nav className="fixed z-50 top-0 w-full flex gap-1 p-4 bg-background/50 backdrop-blur-md text-white justify-center items-center border-b border-white/10">
       {navlinks.map((link) => (
         <Link
           key={link.href}
@@ -37,7 +37,7 @@ export default function Navbar() {
                 ? "bg-accent-pink text-black"
                 : "hover:bg-background-two hover:text-pink-200"
               : ""
-          } flex flex-row items-center gap-2 p-2`}
+          } flex flex-row items-center gap-2 p-2 w-36 justify-center`}
         >
           <div>{link.icon}</div>
           <div>{link.label}</div>

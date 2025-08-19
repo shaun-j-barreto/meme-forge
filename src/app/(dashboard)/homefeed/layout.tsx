@@ -6,7 +6,7 @@ export default function HomeFeedLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div>
+    <div className="mt-20">
       <HomeFeedTab />
       {children}
     </div>

@@ -18,7 +18,7 @@ export default function HomeFeedTab() {
   ];
 
   return (
-    <nav className="flex p-4 bg-background gap-1 text-white ">
+    <nav className="flex p-4 bg-background gap-1 text-white justify-center items-center ">
       {homelinks.map((link) => (
         <Link
           key={link.href}
