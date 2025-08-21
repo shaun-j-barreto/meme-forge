@@ -2,10 +2,10 @@
 
 /* Default theme → Dark mode */
 :root {
-  --background: #222831;
-  --foreground: #f5f5f5;
-  --background-two: #333c49;
-  --card-background: #2a313c;
+  --background: #15181d;
+  --foreground: #d0d0d0;
+  --background-two: #272b32;
+  --card-background: #1a1e24;
 
   /* Accents */
   --accent-red: #ff5e57; /* Reaction highlights */

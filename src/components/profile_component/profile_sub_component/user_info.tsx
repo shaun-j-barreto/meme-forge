@@ -6,13 +6,13 @@ const mockUserimage = "https://i.pravatar.cc/100?img=32";
 const UserInfo = () => {
   return (
     <>
-      <section className="user-profile-container mt-5 col-span-2 flex flex-row gap-4 bg-background-two/50 p-5 rounded-xs">
-        <div className="image-section flex flex-col items-center justify-center gap-2 ">
+      <section className="user-profile-container mt-5 col-span-2 flex flex-row gap-10 bg-background-two/50 p-5 rounded-xs">
+        <div className="image-section flex flex-col items-center justify-center gap-5 ">
           <div className="rounded-full bg-gradient-to-r from-pink-400 via-orange-400 to-blue-400 p-1 overflow-hidden">
             <Image
               src={mockUserimage}
-              width={120}
-              height={120}
+              width={150}
+              height={150}
               alt="user profile"
               className="rounded-full"
             />

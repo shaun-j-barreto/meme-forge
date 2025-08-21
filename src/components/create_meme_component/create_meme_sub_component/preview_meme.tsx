@@ -3,7 +3,7 @@ import React from "react";
 const PreviewMeme = () => {
   return (
     <div>
-      <div className="text-xl font-medium text-gray-200 bg-background-two/50 p-2.5 border border-white/10 text-center">
+      <div className="text-xl  text-gray-900 font-bold bg-gradient-to-r from-pink-400 via-orange-400 to-blue-400  p-2.5 text-center">
         Preview Meme
       </div>
       <div className="mt-3 p-4 border border-white/10 bg-background-two/40">
