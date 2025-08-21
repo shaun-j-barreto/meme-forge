@@ -4,6 +4,7 @@ import {
   HeartIcon,
   LaughIcon,
   ThumbsUp,
+  ThumbsDown,
   MessageCircleMoreIcon,
 } from "lucide-react";
 import Image from "next/image";
@@ -14,7 +15,7 @@ const MemeCard = ({ memedata, page }) => {
       {memedata.map((meme, index) => (
         <div
           key={index}
-          className="meme-card border-2 border-background-two bg-card-background "
+          className="meme-card border-2 border-white/10 bg-card-background "
         >
           <div className="meme-image-component relative">
             <div className="absolute top-0 text-2xl w-full text-center p-2">
@@ -88,15 +89,19 @@ const MemeCard = ({ memedata, page }) => {
           <div className="meme-reaction-info">
             <div className="flex flex-row items-center gap-4 p-2">
               <div className="text-base text-gray-300 flex items-center gap-1">
-                <ThumbsUp fill="lightgreen" color="black" size={20} />
+                <ThumbsUp fill="#ffbb73" color="black" size={20} />
                 {meme.reactions.likeCount}
               </div>
               <div className="text-base text-gray-300 flex items-center gap-1">
-                <LaughIcon fill="#ffbb73" color="black" size={20} />
+                <ThumbsDown fill="#ff5e57" color="black" size={20} />
+                {meme.reactions.dislikeCount}
+              </div>
+              <div className="text-base text-gray-300 flex items-center gap-1">
+                <LaughIcon fill="#ff9f43" color="black" size={20} />
                 {meme.reactions.laughCount}
               </div>
               <div className="text-base text-gray-300 flex items-center gap-1">
-                <HeartIcon fill="#ff5e57" color="black" size={20} />
+                <HeartIcon fill="#ff6b81" color="black" size={20} />
                 {meme.reactions.heartCount}
               </div>
               <div className="text-base text-gray-300 flex items-center gap-1">

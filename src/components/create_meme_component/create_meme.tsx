@@ -14,7 +14,7 @@ const CreateMemeSection = () => {
   ];
   return (
     <div className="p-8">
-      <h1 className="inline-block text-4xl font-semibold mb-4 bg-gradient-to-r from-[#ff6b81] to-[#ff5e57] bg-clip-text text-transparent">
+      <h1 className="inline-block text-4xl font-semibold mb-4 bg-gradient-to-r from-pink-400 via-orange-400 to-blue-400 bg-clip-text text-transparent">
         Create Meme
       </h1>
 
@@ -26,9 +26,9 @@ const CreateMemeSection = () => {
                 key={tab.id}
                 className={`${
                   activeTab === tab.id
-                    ? "bg-accent-pink-light text-black"
+                    ? "bg-gradient-to-r from-pink-400 via-orange-400 to-blue-400 text-black"
                     : "hover:bg-background-two hover:text-pink-200"
-                } flex flex-row p-2 cursor-pointer flex-1 justify-center`}
+                } flex flex-row p-2 cursor-pointer flex-1 justify-center rounded-xs`}
                 onClick={() => setActiveTab(tab.id)}
               >
                 <div className="flex items-center gap-2">

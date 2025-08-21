@@ -15,7 +15,12 @@ const mockMemePosts = [
     createdAt: "2025-08-18T10:30:00Z",
     description: "This meme perfectly describes my life as a dev.",
     tags: ["coding", "debugging", "relatable", "devlife"],
-    reactions: { likeCount: 124, laughCount: 87, heartCount: 45 },
+    reactions: {
+      likeCount: 124,
+      dislikeCount: 5,
+      laughCount: 87,
+      heartCount: 45,
+    },
     comments: [
       {
         commentId: 1001,
@@ -48,7 +53,12 @@ const mockMemePosts = [
     createdAt: "2025-08-17T18:45:00Z",
     description: "Classic frontend struggles 😂",
     tags: ["frontend", "bugs", "devlife"],
-    reactions: { likeCount: 89, laughCount: 65, heartCount: 32 },
+    reactions: {
+      likeCount: 89,
+      dislikeCount: 2,
+      laughCount: 65,
+      heartCount: 32,
+    },
     comments: [
       {
         commentId: 1003,
@@ -73,7 +83,12 @@ const mockMemePosts = [
     createdAt: "2025-08-16T14:20:00Z",
     description: "API done, not my issue anymore 😂",
     tags: ["backend", "api", "bugs"],
-    reactions: { likeCount: 150, laughCount: 100, heartCount: 60 },
+    reactions: {
+      likeCount: 150,
+      dislikeCount: 5,
+      laughCount: 100,
+      heartCount: 60,
+    },
     comments: [],
   },
   {
@@ -89,7 +104,12 @@ const mockMemePosts = [
     createdAt: "2025-08-15T09:10:00Z",
     description: "Regex = black magic ✨",
     tags: ["regex", "coding", "struggles"],
-    reactions: { likeCount: 200, laughCount: 180, heartCount: 75 },
+    reactions: {
+      likeCount: 200,
+      dislikeCount: 5,
+      laughCount: 180,
+      heartCount: 75,
+    },
     comments: [
       {
         commentId: 1004,
@@ -114,7 +134,12 @@ const mockMemePosts = [
     createdAt: "2025-08-14T22:00:00Z",
     description: "Miracles do happen sometimes 🙏",
     tags: ["deployment", "success", "devlife"],
-    reactions: { likeCount: 300, laughCount: 150, heartCount: 220 },
+    reactions: {
+      likeCount: 300,
+      dislikeCount: 5,
+      laughCount: 150,
+      heartCount: 220,
+    },
     comments: [],
   },
   {
@@ -130,7 +155,12 @@ const mockMemePosts = [
     createdAt: "2025-08-13T16:50:00Z",
     description: "Why is this my daily struggle 😭",
     tags: ["git", "mergeconflict", "struggles"],
-    reactions: { likeCount: 110, laughCount: 70, heartCount: 55 },
+    reactions: {
+      likeCount: 110,
+      dislikeCount: 5,
+      laughCount: 70,
+      heartCount: 55,
+    },
     comments: [],
   },
   {
@@ -146,7 +176,12 @@ const mockMemePosts = [
     createdAt: "2025-08-12T08:15:00Z",
     description: "We’ve all been there 😅",
     tags: ["junior", "senior", "code"],
-    reactions: { likeCount: 95, laughCount: 80, heartCount: 40 },
+    reactions: {
+      likeCount: 95,
+      dislikeCount: 5,
+      laughCount: 80,
+      heartCount: 40,
+    },
     comments: [],
   },
   {
@@ -162,7 +197,12 @@ const mockMemePosts = [
     createdAt: "2025-08-11T20:00:00Z",
     description: "How will I survive without it 😱",
     tags: ["stackoverflow", "coding", "panic"],
-    reactions: { likeCount: 400, laughCount: 300, heartCount: 150 },
+    reactions: {
+      likeCount: 400,
+      dislikeCount: 5,
+      laughCount: 300,
+      heartCount: 150,
+    },
     comments: [],
   },
   {
@@ -178,7 +218,12 @@ const mockMemePosts = [
     createdAt: "2025-08-10T12:45:00Z",
     description: "Dark mode supremacy! 🖤",
     tags: ["darkmode", "coding", "theme"],
-    reactions: { likeCount: 210, laughCount: 90, heartCount: 180 },
+    reactions: {
+      likeCount: 210,
+      dislikeCount: 5,
+      laughCount: 90,
+      heartCount: 180,
+    },
     comments: [],
   },
   {
@@ -194,7 +239,12 @@ const mockMemePosts = [
     createdAt: "2025-08-09T15:10:00Z",
     description: "Bro just ask about React pls 🥲",
     tags: ["interview", "dsa", "struggles"],
-    reactions: { likeCount: 180, laughCount: 120, heartCount: 90 },
+    reactions: {
+      likeCount: 180,
+      dislikeCount: 5,
+      laughCount: 120,
+      heartCount: 90,
+    },
     comments: [],
   },
 ];

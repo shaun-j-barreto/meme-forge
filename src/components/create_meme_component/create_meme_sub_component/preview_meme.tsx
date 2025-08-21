@@ -7,7 +7,7 @@ const PreviewMeme = () => {
         Preview Meme
       </div>
       <div className="mt-3 p-4 border border-white/10 bg-background-two/40">
-        <div className="h-64 bg-background-two flex items-center justify-center text-white">
+        <div className="h-[500px] bg-background-two flex items-center justify-center text-white">
           Meme Preview Area
         </div>
       </div>
