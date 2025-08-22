@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import UploadImage from "./create_meme_sub_component/uploadImage";
 import MemeText from "./create_meme_sub_component/memeText";
 import MemeDetails from "./create_meme_sub_component/memeDetails";
-import { ImageIcon, TextIcon, NotebookPen } from "lucide-react";
+import { ImageIcon, TextIcon, NotebookPen, SquarePlusIcon } from "lucide-react";
 import PreviewMeme from "./create_meme_sub_component/preview_meme";
 const CreateMemeSection = () => {
   const [activeTab, setActiveTab] = useState("Image");
@@ -42,6 +42,15 @@ const CreateMemeSection = () => {
             {activeTab === "Image" && <UploadImage />}
             {activeTab === "Text" && <MemeText />}
             {activeTab === "Details" && <MemeDetails />}
+          </div>
+          <div className="flex flex-row gap-4">
+            <button className="flex flex-3 flex-row gap-3 justify-center items-center mt-4 w-full bg-gradient-to-r from-pink-400 via-orange-400 to-blue-400 text-black font-medium px-3 py-2 rounded-xs ">
+              <SquarePlusIcon size={20} color="black" />
+              <span>Create Meme</span>
+            </button>
+            <button className=" flex-1 rounded-xs mt-4 w-full bg-background-two px-3 py-2">
+              Cancel
+            </button>
           </div>
         </div>
         <div className="col-span-1">

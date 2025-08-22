@@ -21,7 +21,7 @@ const UserInfo = () => {
             Edit profile
           </button>
         </div>
-        <div className="user-info-section w-fit ">
+        <div className="user-info-section w-fit border-l-2 border-white/10 pl-5 ">
           <div className="flex flex-row items-center gap-2">
             <div className=" text-3xl font-bold ">MemeLord</div>
             <span className="rounded-full bg-gradient-to-r from-pink-400 via-orange-400 to-blue-400 px-2 text-black text-xs font-medium">

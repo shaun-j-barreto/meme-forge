@@ -11,7 +11,7 @@ import Image from "next/image";
 
 const MemeCard = ({ memedata, page }) => {
   return (
-    <div className="grid grid-cols-4  gap-4 p-4">
+    <div className="grid grid-cols-3  gap-4 p-4">
       {memedata.map((meme, index) => (
         <div
           key={index}
