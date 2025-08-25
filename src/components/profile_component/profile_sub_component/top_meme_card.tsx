@@ -32,12 +32,12 @@ const mockdata = {
 };
 const TopMemeCard = () => {
   return (
-    <div className="top-meme-card bg-background-two/50 p-2 rounded-xs  flex flex-col">
+    <div className="top-meme-card bg-background-two/50 p-5 rounded-xs  flex flex-col">
       <div className="flex flex-row items-center gap-3">
         <div className="flex items-center bg-gradient-to-r from-pink-400 via-orange-400 to-blue-400 rounded-full p-2">
           <CrownIcon size={20} className="text-black" />
         </div>
-        <div className="font-bold text-xl">Most Reacted Meme</div>
+        <div className="font-bold text-2xl">Most Reacted Meme</div>
       </div>
       <div className="relative mt-4">
         <div className="absolute top-0 text-2xl w-full text-center p-2">
@@ -63,7 +63,7 @@ const TopMemeCard = () => {
           {mockdata.tags.map((tag, tagIndex) => (
             <span
               key={tagIndex}
-              className=" text-xs bg-background-two py-0.5 px-2 rounded-full"
+              className=" text-sm bg-gradient-to-r from-pink-400 via-orange-400 to-blue-400 text-black font-medium py-0.5 px-2 rounded-full"
             >
               #{tag}
             </span>

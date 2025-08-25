@@ -11,11 +11,11 @@ import Image from "next/image";
 
 const MemeCard = ({ memedata, page }) => {
   return (
-    <div className="grid grid-cols-3  gap-4 p-4">
+    <div className="grid  md:grid-cols-3 sm:grid-cols-1  gap-4 p-4">
       {memedata.map((meme, index) => (
         <div
           key={index}
-          className="meme-card border-1 border-white/15 bg-card-background "
+          className="meme-card border-4 border-white/15 bg-card-background rounded-sm overflow-hidden"
         >
           <div className="meme-image-component relative">
             <div className="absolute top-0 text-2xl w-full text-center p-2">
@@ -73,11 +73,13 @@ const MemeCard = ({ memedata, page }) => {
               {meme.tags.map((tag, tagIndex) => (
                 <span
                   key={tagIndex}
-                  className={`text-xs bg-background-two py-0.5 px-2 rounded-full ${
+                  className={`text-sm py-0.5 px-2 rounded-full text-black font-medium  ${
                     page == "Home"
-                      ? " text-accent-orange-light"
+                      ? "bg-accent-orange-light"
                       : page == "Leaderboard"
-                      ? "text-accent-blue-light"
+                      ? "bg-accent-blue-light"
+                      : page == "Profile"
+                      ? "bg-gradient-to-r from-pink-400 via-orange-400 to-blue-400"
                       : "text-gray-300"
                   }`}
                 >

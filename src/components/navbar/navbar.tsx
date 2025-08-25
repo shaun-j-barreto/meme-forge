@@ -3,21 +3,29 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { HomeIcon, Trophy, PlusIcon, AnvilIcon } from "lucide-react";
+import ProfileModal from "./profile_modal";
 import Image from "next/image";
+import { useState } from "react";
 
+const demoIMage = "https://i.pravatar.cc/100?img=32";
+
+const navlinks = [
+  { href: "/homefeed", label: "Home", icon: <HomeIcon size={15} /> },
+  {
+    href: "/create_meme",
+    label: "Create Meme",
+    icon: <PlusIcon size={15} />,
+  },
+  { href: "/leaderboard", label: "Leaderboard", icon: <Trophy size={15} /> },
+];
 export default function Navbar() {
   const pathname = usePathname();
-  const demoIMage = "https://i.pravatar.cc/100?img=32";
 
-  const navlinks = [
-    { href: "/homefeed", label: "Home", icon: <HomeIcon size={15} /> },
-    {
-      href: "/create_meme",
-      label: "Create Meme",
-      icon: <PlusIcon size={15} />,
-    },
-    { href: "/leaderboard", label: "Leaderboard", icon: <Trophy size={15} /> },
-  ];
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const toggleModal = () => {
+    setIsModalOpen(!isModalOpen);
+  };
 
   return (
     <nav className="fixed z-50 top-0 w-full flex gap-1 p-4 bg-background/50 backdrop-blur-md text-white justify-between items-center border-b border-white/10">
@@ -53,7 +61,7 @@ export default function Navbar() {
           </Link>
         ))}
       </div>
-      <div className="relative p-0.5 rounded-full">
+      <div onClick={toggleModal} className="relative p-0.5 rounded-full">
         <div className="absolute inset-0 bg-gradient-to-r from-orange-500 via-blue-500 to-pink-500 rounded-full"></div>
         <div className="relative bg-background p-0.5 rounded-full">
           <Image
@@ -64,6 +72,8 @@ export default function Navbar() {
             className="rounded-full object-cover"
           />
         </div>
+
+        {isModalOpen && <ProfileModal onClose={() => setIsModalOpen(false)} />}
       </div>
     </nav>
   );

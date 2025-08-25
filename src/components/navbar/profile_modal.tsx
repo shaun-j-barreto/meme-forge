@@ -1,0 +1,49 @@
+"use client";
+
+import React, { useRef } from "react";
+import { Sun, Moon, LogOut, User } from "lucide-react";
+import { useRouter } from "next/navigation";
+
+const ProfileModal = ({ onClose }) => {
+  const router = useRouter();
+  const modalRef = useRef<HTMLDivElement>(null);
+
+  const handleOverlayClick = (event: React.MouseEvent<HTMLDivElement>) => {
+    if (modalRef.current && !modalRef.current.contains(event.target as Node)) {
+      onClose();
+    }
+  };
+
+  return (
+    <div
+      onClick={handleOverlayClick}
+      className="fixed inset-0 z-50 flex justify-end items-start h-[100vh]  p-12"
+    >
+      <div
+        ref={modalRef}
+        className="flex flex-col gap-2 bg-background-two font-medium rounded-xs w-48 p-2 relative"
+      >
+        <button
+          className="cursor-pointer flex items-center gap-3 w-full px-4 py-2 rounded-xs bg-background text-white hover:bg-gradient-to-r from-pink-400 via-orange-400 to-blue-400 hover:text-black"
+          onClick={() => router.push("/profile")}
+        >
+          <User size={20} />
+          <span>Profile</span>
+        </button>
+
+        <button className="flex flex-row items-center gap-3 w-full px-4 py-2 rounded-xs bg-background text-white">
+          <Sun className="hidden dark:block" size={20} />
+          <Moon className="block dark:hidden" size={20} />
+          <span>Toggle Theme</span>
+        </button>
+
+        <button className="cursor-pointer flex items-center gap-3 w-full px-4 py-2 rounded-xs bg-background text-white hover:bg-accent-red">
+          <LogOut size={20} />
+          <span>Logout</span>
+        </button>
+      </div>
+    </div>
+  );
+};
+
+export default ProfileModal;

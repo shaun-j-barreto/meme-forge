@@ -20,7 +20,7 @@ const StatCard = ({
       <Icon size={25} fill={fill} color={color} />
       <span>{title}</span>
     </div>
-    <div className="absolute text-8xl tracking-tighter font-bold bg-gradient-to-r from-pink-400 via-orange-400 to-blue-400 bg-clip-text text-transparent top-0 right-0 left-0 bottom-0 m-auto flex items-center justify-center">
+    <div className="absolute text-8xl tracking-tighter font-bold bg-gradient-to-r from-pink-400  via-orange-400 to-blue-400 bg-clip-text text-transparent top-0 right-0 left-0 bottom-0 m-auto flex items-center justify-center">
       <span>{value}</span>
     </div>
   </div>
