@@ -15,9 +15,9 @@ const MemeCard = ({ memedata, page }) => {
       {memedata.map((meme, index) => (
         <div
           key={index}
-          className="meme-card border-4 border-white/15 bg-card-background rounded-sm overflow-hidden"
+          className="meme-card border-4 border-white/15 bg-card-background rounded-xs overflow-hidden"
         >
-          <div className="meme-image-component relative">
+          <div className="meme-image-component relative rounded-xs overflow-hidden">
             <div className="absolute top-0 text-2xl w-full text-center p-2">
               {meme.upperText}
             </div>
@@ -27,7 +27,7 @@ const MemeCard = ({ memedata, page }) => {
               layout="responsive"
               width={16}
               height={9}
-              className="w-full h-auto"
+              className="w-full h-auto "
             />
             <div className="absolute bottom-0 text-2xl w-full text-center p-2">
               {meme.bottomText}
