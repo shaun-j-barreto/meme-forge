@@ -3,6 +3,7 @@
 import React, { useRef } from "react";
 import { Sun, Moon, LogOut, User } from "lucide-react";
 import { useRouter } from "next/navigation";
+import { BackgroundGradient } from "@/styles";
 
 const ProfileModal = ({ onClose }) => {
   const router = useRouter();
@@ -24,7 +25,7 @@ const ProfileModal = ({ onClose }) => {
         className="flex flex-col gap-2 bg-background-two font-medium rounded-xs w-48 p-2 relative"
       >
         <button
-          className="cursor-pointer flex items-center gap-3 w-full px-4 py-2 rounded-xs bg-background text-white hover:bg-gradient-to-r from-pink-400 via-orange-400 to-blue-400 hover:text-black"
+          className={`cursor-pointer flex items-center gap-3 w-full px-4 py-2 rounded-xs bg-background text-white hover:${BackgroundGradient}  hover:text-black`}
           onClick={() => router.push("/profile")}
         >
           <User size={20} />

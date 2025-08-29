@@ -1,6 +1,7 @@
 import { UserPlusIcon } from "lucide-react";
 import Image from "next/image";
 import React from "react";
+import { BackgroundGradient } from "@/styles";
 
 const mockUserimage = "https://i.pravatar.cc/100?img=32";
 const UserInfo = () => {
@@ -8,7 +9,9 @@ const UserInfo = () => {
     <>
       <section className="user-profile-container mt-5 col-span-2 flex flex-row gap-10 bg-background-two/50 p-5 rounded-xs">
         <div className="image-section flex flex-col items-center justify-center gap-5 ">
-          <div className="rounded-full bg-gradient-to-r from-pink-400 via-orange-400 to-blue-400 p-1 overflow-hidden">
+          <div
+            className={`rounded-full ${BackgroundGradient} p-1 overflow-hidden`}
+          >
             <Image
               src={mockUserimage}
               width={150}
@@ -24,7 +27,9 @@ const UserInfo = () => {
         <div className="user-info-section w-fit border-l-2 border-white/10 pl-5 ">
           <div className="flex flex-row items-center gap-2">
             <div className=" text-3xl font-bold ">MemeLord</div>
-            <span className="rounded-full bg-gradient-to-r from-pink-400 via-orange-400 to-blue-400 px-2 text-black text-xs font-medium">
+            <span
+              className={`rounded-full ${BackgroundGradient} px-2 text-black text-xs font-medium`}
+            >
               Rank #7
             </span>
           </div>
@@ -40,7 +45,9 @@ const UserInfo = () => {
               <span className="text-lg">Following</span>
             </div>
           </div>
-          <button className=" cursor-pointer flex flex-row gap-3 mt-4 justify-center items-center bg-gradient-to-r from-pink-400 via-orange-400 to-blue-400 text-black font-medium px-3 py-1  rounded-xs">
+          <button
+            className={`cursor-pointer flex flex-row gap-3 mt-4 justify-center items-center ${BackgroundGradient} text-black font-medium px-3 py-1  rounded-xs`}
+          >
             <UserPlusIcon size={20} color="black" />
             <span>Follow</span>
           </button>

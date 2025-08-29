@@ -6,6 +6,7 @@ import { HomeIcon, Trophy, PlusIcon, AnvilIcon } from "lucide-react";
 import ProfileModal from "./profile_modal";
 import Image from "next/image";
 import { useState } from "react";
+import { BackgroundGradient } from "@/styles";
 
 const demoIMage = "https://i.pravatar.cc/100?img=32";
 
@@ -30,7 +31,7 @@ export default function Navbar() {
   return (
     <nav className="fixed z-50 top-0 w-full flex gap-1 p-4 bg-background/50 backdrop-blur-md text-white justify-between items-center border-b border-white/10">
       <div className="flex flex-row items-center gap-1">
-        <div className="p-1.5 rounded-full bg-gradient-to-r from-pink-400 via-orange-400 to-blue-400">
+        <div className={`p-1.5 rounded-full ${BackgroundGradient}`}>
           <AnvilIcon size={25} className="text-black" />
         </div>
         <h1 className="text-2xl font-bold">MemeForge</h1>
@@ -51,7 +52,7 @@ export default function Navbar() {
                   : "hover:bg-background-two hover:text-blue-200"
                 : link.href === "/create_meme"
                 ? pathname.startsWith("/create_meme")
-                  ? "bg-gradient-to-r from-pink-400 via-orange-400 to-blue-400 text-black"
+                  ? `${BackgroundGradient} text-black`
                   : "hover:bg-background-two hover:text-pink-200"
                 : ""
             } flex flex-row items-center gap-2 p-2 w-36 justify-center rounded-xs`}
@@ -62,7 +63,9 @@ export default function Navbar() {
         ))}
       </div>
       <div onClick={toggleModal} className="relative p-0.5 rounded-full">
-        <div className="absolute inset-0 bg-gradient-to-r from-orange-500 via-blue-500 to-pink-500 rounded-full"></div>
+        <div
+          className={`absolute inset-0 ${BackgroundGradient} rounded-full`}
+        ></div>
         <div className="relative bg-background p-0.5 rounded-full">
           <Image
             src={demoIMage}

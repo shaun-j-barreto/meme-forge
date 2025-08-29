@@ -1,5 +1,5 @@
 import React from "react";
-import { Crown, Star, Award, Medal, Shield } from "lucide-react";
+import { Crown } from "lucide-react";
 import Image from "next/image";
 
 const mockData = [
@@ -88,11 +88,11 @@ const mockData = [
 const CreatorList = () => {
   return (
     <div className="creator-component">
-      <div className="main-title flex items-center gap-2 mb-2">
-        <div className="p-1 bg-accent-blue-light rounded-full">
-          <Crown size={25} color="black" />
+      <div className="main-title flex items-center gap-2 mb-5">
+        <div className="p-1.5 border-2 border-accent-blue-light rounded-full">
+          <Crown size={25} color="skyblue" />
         </div>
-        <h1 className="text-2xl font-bold ">Top Meme Creators</h1>
+        <h1 className="text-3xl font-bold text-blue-100 ">Top Meme Creators</h1>
       </div>
 
       <div className="card-list flex flex-col gap-2">
@@ -108,17 +108,15 @@ const CreatorList = () => {
               bronze:
                 "bg-gradient-to-r from-[#A97142] via-[#C08040] to-[#704214]",
             },
-            border: isTopCreator
-              ? "border-black/20"
-              : "border-accent-blue-light",
+            border: isTopCreator ? "border-black/20" : "bg-white",
             text: isTopCreator ? "text-black" : "text-gray-300",
             subText: isTopCreator ? "text-gray-800" : "text-gray-400",
           };
           const creatorBadge = {
-            legend: "😎",
-            gold: <Award color="#B8860B" fill="#FFD700" />,
-            silver: <Medal color="#6E6E6E" fill="#C0C0C0" />,
-            bronze: <Shield color="#5C4033" fill="#996532" />,
+            legend: "😈",
+            gold: "🥇",
+            silver: "🥈",
+            bronze: "🥉",
           };
 
           return (
@@ -138,16 +136,8 @@ const CreatorList = () => {
             >
               <div className="userinfo flex flex-row items-center gap-2">
                 <div
-                  className={`p-1 w-10 h-10 flex justify-center text-lg text-black font-bold items-center rounded-full ${
-                    index == 0
-                      ? "bg-background"
-                      : index == 1
-                      ? "bg-yellow-300"
-                      : index == 2
-                      ? "bg-gray-300"
-                      : index == 3
-                      ? "bg-[#da9755]"
-                      : "bg-accent-blue-light"
+                  className={`p-1 w-10 h-10 flex justify-center text-xl text-white font-bold items-center rounded-full ${
+                    isTopCreator ? "bg-background" : "bg-trasparent"
                   }`}
                 >
                   {index == 0 ? (

@@ -1,6 +1,7 @@
 import MemeCard from "@/components/meme_card/memecard";
 import React from "react";
 import { ImagesIcon } from "lucide-react";
+import { BackgroundGradient } from "@/styles";
 
 const mockMemePosts = [
   {
@@ -254,7 +255,7 @@ const UserMemeSection = () => {
     <>
       <section className="user-memes-section bg-background-two/50 mt-4 col-span-2">
         <div className="flex flex-row items-center gap-3 p-4">
-          <div className="p-2 rounded-full w-fit bg-gradient-to-r from-pink-400 via-orange-400 to-blue-400">
+          <div className={`p-2 rounded-full w-fit ${BackgroundGradient}`}>
             <ImagesIcon className="text-black" />
           </div>
           <h1 className="text-2xl font-bold">All Posts</h1>

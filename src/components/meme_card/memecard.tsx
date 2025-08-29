@@ -8,6 +8,7 @@ import {
   MessageCircleMoreIcon,
 } from "lucide-react";
 import Image from "next/image";
+import { BackgroundGradient } from "@/styles";
 
 const MemeCard = ({ memedata, page }) => {
   return (
@@ -79,7 +80,7 @@ const MemeCard = ({ memedata, page }) => {
                       : page == "Leaderboard"
                       ? "bg-accent-blue-light"
                       : page == "Profile"
-                      ? "bg-gradient-to-r from-pink-400 via-orange-400 to-blue-400"
+                      ? BackgroundGradient
                       : "text-gray-300"
                   }`}
                 >

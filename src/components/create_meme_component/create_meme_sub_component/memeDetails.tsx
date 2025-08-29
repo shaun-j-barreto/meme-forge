@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { BackgroundGradient } from "@/styles";
 
 const MemeDetails = () => {
   const [tags, setTags] = useState<string[]>([]);
@@ -51,7 +52,7 @@ const MemeDetails = () => {
             />
             <button
               type="button"
-              className="bg-accent-pink-light px-4 py-2 text-black"
+              className={`${BackgroundGradient} cursor-pointer font-medium px-4  rounded-xs py-2 text-black`}
               onClick={addTags}
             >
               Add
@@ -67,7 +68,7 @@ const MemeDetails = () => {
                 <span>{tag}</span>
                 <button
                   type="button"
-                  className="text-xs font-bold bg-accent-pink-light text-background rounded-full  px-1 hover:bg-white transition"
+                  className={` cursor-pointer text-xs font-bold ${BackgroundGradient} text-background rounded-full  px-1 hover:bg-white transition`}
                   onClick={() => removeTag(index)}
                 >
                   X

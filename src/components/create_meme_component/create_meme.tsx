@@ -5,6 +5,7 @@ import MemeText from "./create_meme_sub_component/memeText";
 import MemeDetails from "./create_meme_sub_component/memeDetails";
 import { ImageIcon, TextIcon, NotebookPen, SquarePlusIcon } from "lucide-react";
 import PreviewMeme from "./create_meme_sub_component/preview_meme";
+import { BackgroundGradient } from "@/styles";
 const CreateMemeSection = () => {
   const [activeTab, setActiveTab] = useState("Image");
   const tabs = [
@@ -14,7 +15,9 @@ const CreateMemeSection = () => {
   ];
   return (
     <div className="p-8">
-      <h1 className="inline-block text-4xl font-semibold mb-4 bg-gradient-to-r from-pink-400 via-orange-400 to-blue-400 bg-clip-text text-transparent">
+      <h1
+        className={`inline-block text-4xl font-semibold mb-4 ${BackgroundGradient} bg-clip-text text-transparent`}
+      >
         Create Meme
       </h1>
 
@@ -26,7 +29,7 @@ const CreateMemeSection = () => {
                 key={tab.id}
                 className={`${
                   activeTab === tab.id
-                    ? "bg-gradient-to-r from-pink-400 via-orange-400 to-blue-400 text-black"
+                    ? `${BackgroundGradient} text-black`
                     : "hover:bg-background-two hover:text-pink-200"
                 } flex flex-row p-2 cursor-pointer flex-1 justify-center rounded-xs`}
                 onClick={() => setActiveTab(tab.id)}
@@ -44,7 +47,9 @@ const CreateMemeSection = () => {
             {activeTab === "Details" && <MemeDetails />}
           </div>
           <div className="flex flex-row gap-4">
-            <button className="flex flex-3 flex-row gap-3 justify-center items-center mt-4 w-full bg-gradient-to-r from-pink-400 via-orange-400 to-blue-400 text-black font-medium px-3 py-2 rounded-xs ">
+            <button
+              className={`flex flex-3 flex-row gap-3 justify-center items-center mt-4 w-full ${BackgroundGradient} text-black cursor-pointer font-medium px-3 py-2 rounded-xs`}
+            >
               <SquarePlusIcon size={20} color="black" />
               <span>Create Meme</span>
             </button>
