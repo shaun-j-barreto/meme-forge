@@ -12,11 +12,11 @@ import { BackgroundGradient } from "@/styles";
 
 const MemeCard = ({ memedata, page }) => {
   return (
-    <div className="grid  md:grid-cols-3 sm:grid-cols-1  gap-4 p-4">
+    <div className="grid  md:grid-cols-3 sm:grid-cols-1  gap-4 p-2">
       {memedata.map((meme, index) => (
         <div
           key={index}
-          className="meme-card border-4 border-white/15 bg-card-background rounded-xs overflow-hidden"
+          className="meme-card border-5 border-white/10 bg-card-background  overflow-hidden"
         >
           <div className="meme-image-component relative rounded-xs overflow-hidden">
             <div className="absolute top-0 text-2xl w-full text-center p-2">
@@ -49,7 +49,7 @@ const MemeCard = ({ memedata, page }) => {
               height={48}
             />
             <div className="flex flex-col">
-              <div className="text-lg font-semibold">
+              <div className="text-lg font-semibold text-white">
                 {meme.author.username}
               </div>
               <div className="text-xs text-gray-300 font-medium">

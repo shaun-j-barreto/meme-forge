@@ -53,7 +53,7 @@ const CreateMemeSection = () => {
               <SquarePlusIcon size={20} color="black" />
               <span>Create Meme</span>
             </button>
-            <button className=" flex-1 rounded-xs mt-4 w-full bg-background-two px-3 py-2">
+            <button className=" flex-1 rounded-xs mt-4 w-full bg-background-two px-3 py-2 cursor-pointer hover:bg-accent-red-light hover:text-black">
               Cancel
             </button>
           </div>

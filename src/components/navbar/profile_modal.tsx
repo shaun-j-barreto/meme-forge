@@ -25,7 +25,7 @@ const ProfileModal = ({ onClose }) => {
         className="flex flex-col gap-2 bg-background-two font-medium rounded-xs w-48 p-2 relative"
       >
         <button
-          className={`cursor-pointer flex items-center gap-3 w-full px-4 py-2 rounded-xs bg-background text-white hover:${BackgroundGradient}  hover:text-black`}
+          className={`cursor-pointer flex items-center gap-3 w-full px-4 py-2 rounded-xs bg-background text-white hover:bg-white hover:text-black`}
           onClick={() => router.push("/profile")}
         >
           <User size={20} />

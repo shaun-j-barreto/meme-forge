@@ -3,6 +3,7 @@ import { useState, useRef } from "react";
 
 const ImageUpload = () => {
   const [imageUrl, setImageUrl] = useState("");
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [isDragOver, setIsDragOver] = useState(false);
   const fileInputRef = useRef(null);
 

@@ -10,7 +10,7 @@ const StatCard = ({
   color,
   fill,
 }: {
-  icon: any;
+  icon: string;
   title: string;
   value: string | number;
   color: string;

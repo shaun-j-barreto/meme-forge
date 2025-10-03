@@ -14,7 +14,7 @@ const UserRank = () => {
   return (
     <div className="user-card rounded-xs p-2 flex justify-between bg-background-two mb-5 mt-5 ">
       <div className="flex flex-row gap-4">
-        <div className={`p-1  w-fit rounded-full ${BackgroundGradient}`}>
+        <div className={`p-1  w-fit rounded-full bg-accent-blue`}>
           <Image
             src={mockdata.profileimage}
             width={100}
@@ -29,7 +29,7 @@ const UserRank = () => {
             {mockdata.userhandle}
           </span>
           <div
-            className={`flex gap-2 text-lg text-black rounded-full px-4  mt-1 font-bold ${BackgroundGradient}`}
+            className={`flex gap-2 text-lg text-black rounded-full px-4  mt-1 font-bold bg-accent-blue`}
           >
             <span>Rank</span>
             <span>#{mockdata.userrank}</span>
