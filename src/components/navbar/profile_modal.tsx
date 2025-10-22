@@ -1,9 +1,8 @@
 "use client";
 
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import { Sun, Moon, LogOut, User } from "lucide-react";
 import { useRouter } from "next/navigation";
-import { BackgroundGradient } from "@/styles";
 
 const ProfileModal = ({ onClose }) => {
   const router = useRouter();
@@ -25,20 +24,20 @@ const ProfileModal = ({ onClose }) => {
         className="flex flex-col gap-2 bg-background-two font-medium rounded-xs w-48 p-2 relative"
       >
         <button
-          className={`cursor-pointer flex items-center gap-3 w-full px-4 py-2 rounded-xs bg-background text-white hover:bg-white hover:text-black`}
+          className={`cursor-pointer flex items-center gap-3 w-full px-4 py-2 rounded-xs bg-background text-text-color-one hover:bg-background-four hover:text-text-color-two`}
           onClick={() => router.push("/profile")}
         >
           <User size={20} />
           <span>Profile</span>
         </button>
 
-        <button className="flex flex-row items-center gap-3 w-full px-4 py-2 rounded-xs bg-background text-white">
+        <button className="cursor-pointer flex items-center gap-3 w-full px-4 py-2 rounded-xs bg-background text-text-color-one hover:bg-background-four hover:text-text-color-two">
           <Sun className="hidden dark:block" size={20} />
           <Moon className="block dark:hidden" size={20} />
           <span>Toggle Theme</span>
         </button>
 
-        <button className="cursor-pointer flex items-center gap-3 w-full px-4 py-2 rounded-xs bg-background text-white hover:bg-accent-red">
+        <button className="cursor-pointer flex items-center gap-3 w-full px-4 py-2 rounded-xs bg-background text-text-color-one hover:bg-accent-red hover:text-text-color-two">
           <LogOut size={20} />
           <span>Logout</span>
         </button>

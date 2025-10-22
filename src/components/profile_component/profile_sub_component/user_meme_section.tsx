@@ -253,12 +253,12 @@ const mockMemePosts = [
 const UserMemeSection = () => {
   return (
     <>
-      <section className="user-memes-section bg-background-two/50 mt-4 col-span-2">
+      <section className="user-memes-section bg-background-two/50 mt-4 col-span-2 border-1 border-background-border">
         <div className="flex flex-row items-center gap-3 p-4">
           <div className={`p-2 rounded-full w-fit ${BackgroundGradient}`}>
-            <ImagesIcon className="text-black" />
+            <ImagesIcon className="text-text-color-one" />
           </div>
-          <h1 className="text-2xl font-bold">All Posts</h1>
+          <h1 className="text-2xl font-bold text-text-color-one">All Posts</h1>
         </div>
         <MemeCard memedata={mockMemePosts} page="Profile" />
       </section>

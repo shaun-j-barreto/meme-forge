@@ -16,7 +16,7 @@ const MemeCard = ({ memedata, page }) => {
       {memedata.map((meme, index) => (
         <div
           key={index}
-          className="meme-card border-5 border-white/10 bg-card-background  overflow-hidden"
+          className="meme-card border-5 border-background-border bg-card-background  overflow-hidden"
         >
           <div className="meme-image-component relative rounded-xs overflow-hidden">
             <div className="absolute top-0 text-2xl w-full text-center p-2">
@@ -43,33 +43,26 @@ const MemeCard = ({ memedata, page }) => {
                   ? "border-accent-orange/80"
                   : page == "Leaderboard"
                   ? "border-accent-blue/80"
-                  : "border-gray-300"
+                  : "border-background-border"
               }`}
               width={48}
               height={48}
             />
             <div className="flex flex-col">
-              <div className="text-lg font-semibold text-white">
+              <div className="text-lg font-semibold text-text-color-one">
                 {meme.author.username}
               </div>
-              <div className="text-xs text-gray-300 font-medium">
+              <div className="text-xs text-text-color-three font-medium">
                 {meme.createdAt}
               </div>
             </div>
           </div>
-          <div className="p-2">{meme.description}</div>
+          <div className="p-2 text-text-color-one bg-background-three">
+            {meme.description}
+          </div>
 
-          <div className="meme-tag-info flex flex-row items-center gap-2 p-2">
-            <TagIcon
-              size={15}
-              className={` ${
-                page == "Home"
-                  ? "text-accent-orange"
-                  : page == "Leaderboard"
-                  ? "text-accent-blue"
-                  : "text-gray-300"
-              }`}
-            />
+          <div className="meme-tag-info flex flex-row items-center gap-2 p-2 bg-background-three">
+            <TagIcon size={15} className="text-text-color-one" />
             <div className="flex flex-wrap gap-1">
               {meme.tags.map((tag, tagIndex) => (
                 <span
@@ -89,25 +82,25 @@ const MemeCard = ({ memedata, page }) => {
               ))}
             </div>
           </div>
-          <div className="meme-reaction-info">
+          <div className="meme-reaction-info bg-background-three ">
             <div className="flex flex-row items-center gap-4 p-2">
-              <div className="text-base text-gray-300 flex items-center gap-1">
+              <div className="text-base text-text-color-one flex items-center gap-1">
                 <ThumbsUp fill="#ffbb73" color="black" size={20} />
                 {meme.reactions.likeCount}
               </div>
-              <div className="text-base text-gray-300 flex items-center gap-1">
+              <div className="text-base text-text-color-one flex items-center gap-1">
                 <ThumbsDown fill="#ff5e57" color="black" size={20} />
                 {meme.reactions.dislikeCount}
               </div>
-              <div className="text-base text-gray-300 flex items-center gap-1">
+              <div className="text-base text-text-color-one flex items-center gap-1">
                 <LaughIcon fill="#ff9f43" color="black" size={20} />
                 {meme.reactions.laughCount}
               </div>
-              <div className="text-base text-gray-300 flex items-center gap-1">
+              <div className="text-base text-text-color-one flex items-center gap-1">
                 <HeartIcon fill="#ff6b81" color="black" size={20} />
                 {meme.reactions.heartCount}
               </div>
-              <div className="text-base text-gray-300 flex items-center gap-1">
+              <div className="text-base text-text-color-one flex items-center gap-1">
                 <MessageCircleMoreIcon size={20} />
                 {meme.comments.length}
               </div>

@@ -42,7 +42,7 @@ const ImageUpload = () => {
     <div className="space-y-4">
       <div className="flex items-center space-x-2">
         <Upload size={20} />
-        <span className="text-lg font-semibold text-neutral-200">
+        <span className="text-lg font-semibold text-text-color-one">
           Upload Image
         </span>
       </div>
@@ -53,12 +53,16 @@ const ImageUpload = () => {
         onDragLeave={handleDragLeave}
         onClick={() => fileInputRef.current?.click()}
       >
-        <Upload size={40} className="mx-auto mb-4 text-neutral-200" />
-        <p className="text-lg font-medium mb-2 text-neutral-400">
+        <Upload size={40} className="mx-auto mb-4 text-text-color-one" />
+        <p className="text-lg font-medium mb-2 text-text-color-three">
           {imageUrl ? "Change Image" : "Upload an Image"}
         </p>
-        <p className="text-gray-500 text-sm">Drag & drop or click to browse</p>
-        <p className="text-xs text-gray-400 mt-2">PNG, JPG, GIF up to 5MB</p>
+        <p className="text-text-color-three text-sm">
+          Drag & drop or click to browse
+        </p>
+        <p className="text-xs text-text-color-three mt-2">
+          PNG, JPG, GIF up to 5MB
+        </p>
         <input
           ref={fileInputRef}
           type="file"

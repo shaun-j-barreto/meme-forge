@@ -14,7 +14,7 @@ const CreateMemeSection = () => {
     { id: "Details", label: "Details", icon: <NotebookPen size={15} /> },
   ];
   return (
-    <div className="p-8">
+    <div className="p-8 text-text-color-one">
       <h1
         className={`inline-block text-4xl font-semibold mb-4 ${BackgroundGradient} bg-clip-text text-transparent`}
       >
@@ -23,15 +23,15 @@ const CreateMemeSection = () => {
 
       <div className="grid grid-cols-2 gap-4">
         <div className="col-span-1">
-          <div className="flex flex-row bg-background-two/50 p-1 gap-1 border border-white/10">
+          <div className="flex flex-row bg-background-two p-1 gap-1 border border-background-border ">
             {tabs.map((tab) => (
               <button
                 key={tab.id}
                 className={`${
                   activeTab === tab.id
-                    ? `${BackgroundGradient} text-black`
-                    : "hover:bg-background-two hover:text-pink-200"
-                } flex flex-row p-2 cursor-pointer flex-1 justify-center rounded-xs`}
+                    ? `${BackgroundGradient} text-text-color-two`
+                    : "hover:bg-background-four hover:text-text-color-two"
+                } flex flex-row p-2 cursor-pointer flex-1 justify-center  rounded-xs`}
                 onClick={() => setActiveTab(tab.id)}
               >
                 <div className="flex items-center gap-2">
@@ -41,7 +41,7 @@ const CreateMemeSection = () => {
               </button>
             ))}
           </div>
-          <div className="mt-3 bg-background-two/40 p-4 border border-white/10">
+          <div className="mt-3 bg-background-two p-4 border border-background-border">
             {activeTab === "Image" && <UploadImage />}
             {activeTab === "Text" && <MemeText />}
             {activeTab === "Details" && <MemeDetails />}
@@ -50,10 +50,10 @@ const CreateMemeSection = () => {
             <button
               className={`flex flex-3 flex-row gap-3 justify-center items-center mt-4 w-full ${BackgroundGradient} text-black cursor-pointer font-medium px-3 py-2 rounded-xs`}
             >
-              <SquarePlusIcon size={20} color="black" />
-              <span>Create Meme</span>
+              <SquarePlusIcon size={20} className="text-text-color-two" />
+              <span className="text-text-color-two">Create Meme</span>
             </button>
-            <button className=" flex-1 rounded-xs mt-4 w-full bg-background-two px-3 py-2 cursor-pointer hover:bg-accent-red-light hover:text-black">
+            <button className=" flex-1 rounded-xs mt-4 w-full bg-background-four text-text-color-two px-3 py-2 cursor-pointer hover:bg-accent-red-light hover:text-text-color-one">
               Cancel
             </button>
           </div>

@@ -89,10 +89,12 @@ const CreatorList = () => {
   return (
     <div className="creator-component">
       <div className="main-title flex items-center gap-2 mb-5">
-        <div className="p-1.5 border-2 border-accent-blue-light rounded-full">
-          <Crown size={25} color="skyblue" />
+        <div className="p-1.5 border-2 border-background-four rounded-full">
+          <Crown size={25} className="text-text-color-one" />
         </div>
-        <h1 className="text-3xl font-bold text-blue-100 ">Top Meme Creators</h1>
+        <h1 className="text-3xl font-bold text-text-color-one">
+          Top Meme Creators
+        </h1>
       </div>
 
       <div className="card-list flex flex-col gap-2">
@@ -108,8 +110,8 @@ const CreatorList = () => {
               bronze:
                 "bg-gradient-to-r from-[#A97142] via-[#C08040] to-[#704214]",
             },
-            border: isTopCreator ? "border-black/20" : "bg-white",
-            text: isTopCreator ? "text-black" : "text-gray-300",
+            border: isTopCreator ? "border-background" : "bg-background-four",
+            text: isTopCreator ? "text-text-color-one" : "text-text-color-two",
             subText: isTopCreator ? "text-gray-800" : "text-gray-400",
           };
           const creatorBadge = {
@@ -131,12 +133,12 @@ const CreatorList = () => {
                   ? creatorStyle.gradients.silver
                   : index == 3
                   ? creatorStyle.gradients.bronze
-                  : "bg-background-two"
+                  : "bg-background-four"
               }`}
             >
               <div className="userinfo flex flex-row items-center gap-2">
                 <div
-                  className={`p-1 w-10 h-10 flex justify-center text-xl text-white font-bold items-center rounded-full ${
+                  className={`p-1 w-10 h-10 flex justify-center text-xl text-text-color-two font-bold items-center rounded-full ${
                     isTopCreator ? "bg-background" : "bg-trasparent"
                   }`}
                 >

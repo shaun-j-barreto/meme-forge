@@ -1,43 +1,61 @@
 @import "tailwindcss";
 
-/* Default theme → Dark mode */
+/* Default theme → Light mode */
 :root {
-  --background: #0d0f12;
-  --foreground: #a8a8a8;
-  --background-two: #1e2126;
-  --card-background: #121416;
+  --background: #f9fafb; /* Main background (light neutral) */
+  --background-two: #f1f3f6; /* Subtle contrast – for secondary sections */
+  --background-three: #e1e4e8; /* Stronger contrast – for cards or borders */
+  --background-four: #000000;
+  --background-border: #ebebeb;
 
-  /* Accents */
-  --accent-red: #ff5e57; /* Reaction highlights */
-  --accent-red-light: #ff8c87; /* Lighter reaction highlights */
-  --accent-blue: #00cfff; /* Links/tags */
-  --accent-blue-light: #4ddbff; /* Lighter links/tags */
-  --accent-orange: #ff9f43; /* Main highlights */
-  --accent-orange-light: #ffbb73; /* Lighter main highlights */
-  --accent-yellow: #ffd600; /* Secondary highlight */
-  --accent-yellow-light: #ffe34d; /* Lighter secondary highlight */
-  --accent-pink: #ff6b81; /* Original pink */
-  --accent-pink-light: #ff94a3; /* Lighter pink */
+  --card-background: #f4f5f7;
 
-  /* Typography */
-  --heading: #ffffff; /* Titles/headings */
-  --body: #d1d1d1; /* Regular text */
-  --muted: #9ca3af; /* Secondary text */
-  --link: var(--accent-blue);
+  /* Light mode accents */
+  --accent-red: #ef4444;
+  --accent-red-light: #f87171;
+  --accent-blue: #00cfff;
+  --accent-blue-light: #4ddbff;
+  --accent-orange: #f97316;
+  --accent-orange-light: #fb923c;
+  --accent-yellow: #eab308;
+  --accent-yellow-light: #fde047;
+  --accent-pink: #ec4899;
+  --accent-pink-light: #f472b6;
 
+  --text-color-one: #000000;
+  --text-color-two: #ffffff;
+  --text-color-three: #9ca3af;
   /* Fonts */
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0d0f12;
+    --background-two: #1e2126;
+    --background-three: #242424;
+    --background-four: #ffffff;
+    --background-border: #2f3030;
+    --card-background: #121416;
+
+    /* Dark mode text colors */
+
+    --text-color-one: #ffffff;
+    --text-color-two: #000000;
+    --text-color-three: #6b7280;
+  }
+}
+
 @theme inline {
-  /* Backgrounds & foregrounds */
   --color-background: var(--background);
-  --color-foreground: var(--foreground);
   --color-background-two: var(--background-two);
+  --color-background-three: var(--background-three);
+  --color-background-four: var(--background-four);
+  --color-background-border: var(--background-border);
   --color-card-background: var(--card-background);
 
-  /* Accents */
   --color-accent-yellow: var(--accent-yellow);
   --color-accent-yellow-light: var(--accent-yellow-light);
   --color-accent-red: var(--accent-red);
@@ -49,33 +67,15 @@
   --color-accent-pink: var(--accent-pink);
   --color-accent-pink-light: var(--accent-pink-light);
 
-  /* Typography colors */
-  --color-heading: var(--heading);
-  --color-body: var(--body);
-  --color-muted: var(--muted);
-  --color-link: var(--link);
+  --color-text-color-one: var(--text-color-one);
+  --color-text-color-two: var(--text-color-two);
+  --color-text-color-three: var(--text-color-three);
 
-  /* Fonts */
   --font-sans: var(--font-sans);
   --font-mono: var(--font-mono);
 }
 
-/* Light mode if user's system prefers it */
-@media (prefers-color-scheme: light) {
-  :root {
-    --background: #ffffff;
-    --foreground: #171717;
-
-    /* Typography for light mode */
-    --heading: #000000;
-    --body: #333333;
-    --muted: #6b7280;
-    --link: var(--accent-blue);
-  }
-}
-
 body {
   background: var(--background);
-  color: var(--foreground);
   font-family: var(--font-sans), Arial, Helvetica, sans-serif;
 }

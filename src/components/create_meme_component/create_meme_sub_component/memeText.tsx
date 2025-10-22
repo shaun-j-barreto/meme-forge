@@ -4,34 +4,34 @@ const MemeText = () => {
   const [color, setColor] = useState("#ffffff");
   return (
     <div>
-      <div className="text-xl font-medium text-neutral-200">Meme Text</div>
+      <div className="text-xl font-medium text-text-color-one">Meme Text</div>
       <form className="flex flex-col space-y-4 mt-4">
         <div>
-          <label className="block text-sm font-medium text-gray-300">
+          <label className="block text-sm font-medium text-text-color-three">
             Top Text
           </label>
           <input
             type="text"
-            className=" outline-none mt-1 block w-full p-2 border border-white/10 bg-background"
+            className=" outline-none mt-1 block w-full p-2 border-1 border-background-border bg-background"
             placeholder="Enter top text"
           />
         </div>
         <div>
-          <label className="block text-sm font-medium text-gray-300">
+          <label className="block text-sm font-medium text-text-color-three">
             Bottom Text
           </label>
           <input
             type="text"
-            className="outline-none mt-1 block w-full p-2 border border-white/10 bg-background"
+            className="outline-none mt-1 block w-full p-2 border-1 border-background-border bg-background"
             placeholder="Enter bottom text"
           />
         </div>
         <div className="grid grid-cols-2 gap-4">
           <div>
-            <label className="block text-sm font-medium text-gray-300">
+            <label className="block text-sm font-medium text-text-color-three">
               Font Size
             </label>
-            <select className="outline-none mt-1 block w-full p-2 border border-white/10 bg-background">
+            <select className="outline-none mt-1 block w-full p-2 border-1 border-background-border bg-background">
               <option value="12" className="bg-background">
                 12px
               </option>
@@ -50,7 +50,7 @@ const MemeText = () => {
             </select>
           </div>
           <div>
-            <label className="block text-sm font-medium text-gray-300">
+            <label className="block text-sm font-medium text-text-color-three">
               Font Color
             </label>
             <div className="flex flex-row mt-1 h-10">

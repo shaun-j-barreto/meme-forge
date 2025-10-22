@@ -18,8 +18,8 @@ export default function HomeFeedTab() {
   ];
 
   return (
-    <nav className="flex p-4 bg-background  text-white justify-center items-center ">
-      <div className="flex bg-gray-600/20 p-2 rounded-xs flex-row items-center gap-1">
+    <nav className="flex p-4 bg-background justify-center items-center ">
+      <div className="flex bg-background-two p-2 rounded-xs flex-row items-center gap-1">
         {homelinks.map((link) => (
           <Link
             key={link.href}
@@ -27,10 +27,10 @@ export default function HomeFeedTab() {
             className={`${
               link.href === "/homefeed/trending" &&
               (pathname === "/" || pathname === "/homefeed")
-                ? "bg-accent-orange-light text-black"
+                ? "bg-accent-orange-light text-text-color-two"
                 : pathname === link.href
-                ? "bg-accent-orange-light text-black"
-                : "hover:bg-background-two hover:text-orange-200"
+                ? "bg-accent-orange-light text-text-color-two"
+                : "hover:bg-background-four hover:text-text-color-two text-text-color-one"
             } flex flex-row items-center gap-2 p-2 w-30 justify-center rounded-xs`}
           >
             <div>{link.icon}</div>

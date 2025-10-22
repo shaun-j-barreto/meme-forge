@@ -29,14 +29,14 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="fixed z-50 top-0 w-full flex gap-1 p-4 bg-background/50 backdrop-blur-md text-white justify-between items-center border-b border-white/10">
+    <nav className="fixed z-50 top-0 w-full flex gap-1 p-4 bg-background/50 backdrop-blur-md justify-between items-center border-b-1 border-background-four/10">
       <div className="flex flex-row items-center gap-1">
         <div className={`p-1.5 rounded-full ${BackgroundGradient}`}>
           <AnvilIcon size={25} className="text-black" />
         </div>
-        <h1 className="text-2xl font-bold">MemeForge</h1>
+        <h1 className="text-2xl font-bold text-text-color-one">MemeForge</h1>
       </div>
-      <div className="flex flex-row items-center gap-1">
+      <div className="flex flex-row items-center gap-1 text-text-color-one">
         {navlinks.map((link) => (
           <Link
             key={link.href}
@@ -44,16 +44,16 @@ export default function Navbar() {
             className={`${
               link.href === "/homefeed"
                 ? pathname === "/" || pathname.startsWith("/homefeed")
-                  ? "bg-accent-orange text-black"
-                  : "hover:bg-background-two hover:text-orange-200"
+                  ? "bg-accent-orange text-text-color-two"
+                  : "hover:bg-background-four hover:text-text-color-two"
                 : link.href === "/leaderboard"
                 ? pathname.startsWith("/leaderboard")
-                  ? "bg-accent-blue text-black"
-                  : "hover:bg-background-two hover:text-blue-200"
+                  ? "bg-accent-blue text-text-color-two"
+                  : "hover:bg-background-four hover:text-text-color-two"
                 : link.href === "/create_meme"
                 ? pathname.startsWith("/create_meme")
-                  ? `${BackgroundGradient} text-black`
-                  : "hover:bg-background-two hover:text-pink-200"
+                  ? `${BackgroundGradient} text-text-color-two`
+                  : "hover:bg-background-four hover:text-text-color-two text-text-color-one "
                 : ""
             } flex flex-row items-center gap-2 p-2 w-36 justify-center rounded-xs`}
           >
