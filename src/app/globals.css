@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 /* Default theme → Light mode */
-:root {
+:root[class="light"] {
   --background: #f9fafb; /* Main background (light neutral) */
   --background-two: #f1f3f6; /* Subtle contrast – for secondary sections */
   --background-three: #e1e4e8; /* Stronger contrast – for cards or borders */
@@ -11,10 +11,10 @@
   --card-background: #f4f5f7;
 
   /* Light mode accents */
-  --accent-red: #ef4444;
+  --accent-red: #ff6060;
   --accent-red-light: #f87171;
-  --accent-blue: #00cfff;
-  --accent-blue-light: #4ddbff;
+  --accent-blue: #10c0e7;
+  --accent-blue-light: #00ccff;
   --accent-orange: #f97316;
   --accent-orange-light: #fb923c;
   --accent-yellow: #eab308;
@@ -31,21 +31,30 @@
 }
 
 /* Dark mode */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0d0f12;
-    --background-two: #1e2126;
-    --background-three: #242424;
-    --background-four: #ffffff;
-    --background-border: #2f3030;
-    --card-background: #121416;
+:root[class="dark"] {
+  --background: #0d0f12;
+  --background-two: #1e2126;
+  --background-three: #242424;
+  --background-four: #ffffff;
+  --background-border: #2f3030;
+  --card-background: #121416;
 
-    /* Dark mode text colors */
+  --accent-red: #ff7878;
+  --accent-red-light: #f87171;
+  --accent-blue: #4ddbff;
+  --accent-blue-light: #abeeff;
+  --accent-orange: #ff9143;
+  --accent-orange-light: #ffaf6d;
+  --accent-yellow: #eab308;
+  --accent-yellow-light: #fde047;
+  --accent-pink: #ec4899;
+  --accent-pink-light: #f472b6;
 
-    --text-color-one: #ffffff;
-    --text-color-two: #000000;
-    --text-color-three: #6b7280;
-  }
+  /* Dark mode text colors */
+
+  --text-color-one: #ffffff;
+  --text-color-two: #000000;
+  --text-color-three: #6b7280;
 }
 
 @theme inline {
