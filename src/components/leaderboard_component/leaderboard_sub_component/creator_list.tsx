@@ -111,7 +111,7 @@ const CreatorList = () => {
                 "bg-gradient-to-r from-[#A97142] via-[#C08040] to-[#704214]",
             },
             border: isTopCreator ? "border-background" : "bg-background-four",
-            text: isTopCreator ? "text-text-color-one" : "text-text-color-two",
+            text: isTopCreator ? "text-text-color-two" : "text-text-color-one",
             subText: isTopCreator ? "text-gray-800" : "text-gray-400",
           };
           const creatorBadge = {
@@ -133,12 +133,12 @@ const CreatorList = () => {
                   ? creatorStyle.gradients.silver
                   : index == 3
                   ? creatorStyle.gradients.bronze
-                  : "bg-background-four"
+                  : "bg-background-three"
               }`}
             >
               <div className="userinfo flex flex-row items-center gap-2">
                 <div
-                  className={`p-1 w-10 h-10 flex justify-center text-xl text-text-color-two font-bold items-center rounded-full ${
+                  className={`p-1 w-10 h-10 flex justify-center text-xl text-text-color-one font-bold items-center rounded-full ${
                     isTopCreator ? "bg-background" : "bg-trasparent"
                   }`}
                 >

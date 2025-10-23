@@ -12,9 +12,9 @@ const mockdata = {
 };
 const UserRank = () => {
   return (
-    <div className="user-card rounded-xs p-2 flex justify-between bg-background-four mb-5 mt-5 ">
+    <div className="user-card rounded-xs p-2 flex justify-between bg-background-three mb-5 mt-5 ">
       <div className="flex flex-row gap-4">
-        <div className={`p-1  w-fit rounded-full bg-background-two`}>
+        <div className={`p-1  w-fit rounded-full bg-background-four`}>
           <Image
             src={mockdata.profileimage}
             width={100}
@@ -23,20 +23,20 @@ const UserRank = () => {
             className="rounded-full"
           />
         </div>
-        <div className="flex flex-col mt-1 text-text-color-two">
+        <div className="flex flex-col mt-1 text-text-color-one">
           <span className="text-2xl font-bold">{mockdata.username}</span>
           <span className="text-base text-text-color-three font-medium">
             {mockdata.userhandle}
           </span>
           <div
-            className={`flex gap-2 text-lg text-text-color-one rounded-full px-4  mt-1 font-bold bg-background-two`}
+            className={`flex gap-2 text-lg text-text-color-two rounded-full px-4  mt-1 font-bold bg-background-four`}
           >
             <span>Rank</span>
             <span>#{mockdata.userrank}</span>
           </div>
         </div>
       </div>
-      <div className="flex gap-2 items-center text-text-color-two">
+      <div className="flex gap-2 items-center text-text-color-one">
         <div
           className={`flex flex-col items-center justify-center w-[100px] rounded-xs h-[90%] `}
         >
