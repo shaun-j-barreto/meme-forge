@@ -9,6 +9,8 @@ const mockdata = {
   totalreactions: 450,
   totalpost: 23,
   userrank: 234,
+  followers: 1200,
+  following: 150,
 };
 const UserRank = () => {
   return (
@@ -41,13 +43,25 @@ const UserRank = () => {
           className={`flex flex-col items-center justify-center w-[100px] rounded-xs h-[90%] `}
         >
           <span className="text-3xl font-bold">{mockdata.totalreactions}</span>
-          <span className="text-lg font-medium">Reactions</span>
+          <span className="text-base font-medium">Reactions</span>
         </div>
         <div
           className={`flex flex-col items-center justify-center w-[100px] rounded-xs h-[90%] `}
         >
           <span className="text-3xl font-bold">{mockdata.totalpost}</span>
-          <span className="text-lg font-medium">Posts</span>
+          <span className="text-base font-medium">Posts</span>
+        </div>
+        <div
+          className={`flex flex-col items-center justify-center w-[100px] rounded-xs h-[90%] `}
+        >
+          <span className="text-3xl font-bold">{mockdata.followers}</span>
+          <span className="text-base font-medium">Followers</span>
+        </div>
+        <div
+          className={`flex flex-col items-center justify-center w-[100px] rounded-xs h-[90%] `}
+        >
+          <span className="text-3xl font-bold">{mockdata.following}</span>
+          <span className="text-base font-medium">Following</span>
         </div>
       </div>
     </div>

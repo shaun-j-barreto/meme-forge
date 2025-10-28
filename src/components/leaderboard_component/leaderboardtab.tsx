@@ -2,39 +2,40 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { CalendarDays, Calendar1, UserStarIcon } from "lucide-react";
+import { Stars, MessageCircle, UserStarIcon } from "lucide-react";
 
 export default function LeaderboardTab() {
   const pathname = usePathname();
 
-  const homelinks = [
-    {
-      href: "/leaderboard/daily",
-      label: "Daily",
-      icon: <Calendar1 size={15} />,
-    },
-    {
-      href: "/leaderboard/weekly",
-      label: "Weekly",
-      icon: <CalendarDays size={15} />,
-    },
+  const leaderboardlinks = [
     {
       href: "/leaderboard/creators",
       label: "Creators",
       icon: <UserStarIcon size={15} />,
+    },
+    {
+      href: "/leaderboard/rising_stars",
+      label: "Rising Stars",
+      icon: <Stars size={15} />,
+    },
+    {
+      href: "/leaderboard/top_commentors",
+      label: "Chatters",
+      icon: <MessageCircle size={15} />,
     },
   ];
 
   return (
     <nav className="flex p-4 bg-background justify-center items-center">
       <div className="flex bg-background-two  p-2 rounded-xs flex-row items-center gap-1">
-        {homelinks.map((link) => (
+        {leaderboardlinks.map((link) => (
           <Link
             key={link.href}
             href={link.href}
             className={`${
-              link.href === "/leaderboard/daily" &&
-              (pathname === "/leaderboard" || pathname === "/leaderboard/daily")
+              link.href === "/leaderboard/creators" &&
+              (pathname === "/leaderboard" ||
+                pathname === "/leaderboard/creators")
                 ? "bg-accent-blue-light text-text-color-two"
                 : pathname === link.href
                 ? "bg-accent-blue-light text-text-color-two"

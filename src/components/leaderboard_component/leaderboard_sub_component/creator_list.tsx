@@ -10,6 +10,8 @@ const mockData = [
     profileImage: "https://i.pravatar.cc/100?img=12",
     totalReactions: 450,
     totalPosts: 23,
+    followers: 1200,
+    following: 150,
   },
   {
     id: 2,
@@ -18,6 +20,8 @@ const mockData = [
     profileImage: "https://i.pravatar.cc/100?img=13",
     totalReactions: 620,
     totalPosts: 30,
+    followers: 900,
+    following: 339,
   },
   {
     id: 3,
@@ -26,6 +30,8 @@ const mockData = [
     profileImage: "https://i.pravatar.cc/100?img=16",
     totalReactions: 380,
     totalPosts: 18,
+    followers: 200,
+    following: 330,
   },
   {
     id: 4,
@@ -34,6 +40,8 @@ const mockData = [
     profileImage: "https://i.pravatar.cc/100?img=18",
     totalReactions: 715,
     totalPosts: 27,
+    followers: 990,
+    following: 569,
   },
   {
     id: 5,
@@ -42,6 +50,8 @@ const mockData = [
     profileImage: "https://i.pravatar.cc/100?img=19",
     totalReactions: 980,
     totalPosts: 41,
+    followers: 900,
+    following: 339,
   },
   {
     id: 6,
@@ -50,6 +60,8 @@ const mockData = [
     profileImage: "https://i.pravatar.cc/100?img=20",
     totalReactions: 540,
     totalPosts: 25,
+    followers: 100,
+    following: 349,
   },
   {
     id: 7,
@@ -58,6 +70,8 @@ const mockData = [
     profileImage: "https://i.pravatar.cc/100?img=22",
     totalReactions: 1200,
     totalPosts: 50,
+    followers: 900,
+    following: 339,
   },
   {
     id: 8,
@@ -66,6 +80,8 @@ const mockData = [
     profileImage: "https://i.pravatar.cc/100?img=25",
     totalReactions: 300,
     totalPosts: 15,
+    followers: 1300,
+    following: 339,
   },
   {
     id: 9,
@@ -74,6 +90,8 @@ const mockData = [
     profileImage: "https://i.pravatar.cc/100?img=26",
     totalReactions: 670,
     totalPosts: 33,
+    followers: 980,
+    following: 739,
   },
   {
     id: 10,
@@ -82,21 +100,14 @@ const mockData = [
     profileImage: "https://i.pravatar.cc/100?img=28",
     totalReactions: 890,
     totalPosts: 38,
+    followers: 980,
+    following: 769,
   },
 ];
 
 const CreatorList = () => {
   return (
     <div className="creator-component">
-      <div className="main-title flex items-center gap-2 mb-5">
-        <div className="p-1.5 border-2 border-background-four rounded-full">
-          <Crown size={25} className="text-text-color-one" />
-        </div>
-        <h1 className="text-3xl font-bold text-text-color-one">
-          Top Meme Creators
-        </h1>
-      </div>
-
       <div className="card-list flex flex-col gap-2">
         {mockData.map((listitem, index) => {
           const isTopCreator = [0, 1, 2, 3].includes(index);
@@ -172,7 +183,7 @@ const CreatorList = () => {
                   </span>
                 </div>
               </div>
-              <div className="flex gap-5 items-center">
+              <div className="flex gap-12 items-center">
                 <div className="reactions flex flex-col items-center">
                   <span className={`text-2xl font-bold ${creatorStyle.text}`}>
                     {listitem.totalReactions}
@@ -187,6 +198,22 @@ const CreatorList = () => {
                   </span>
                   <span className={`text-base font-bold ${creatorStyle.text}`}>
                     Posts
+                  </span>
+                </div>
+                <div className="posts flex flex-col items-center ">
+                  <span className={`text-2xl font-bold ${creatorStyle.text}`}>
+                    {listitem.followers}
+                  </span>
+                  <span className={`text-base font-bold ${creatorStyle.text}`}>
+                    Followers
+                  </span>
+                </div>
+                <div className="posts flex flex-col items-center ">
+                  <span className={`text-2xl font-bold ${creatorStyle.text}`}>
+                    {listitem.following}
+                  </span>
+                  <span className={`text-base font-bold ${creatorStyle.text}`}>
+                    Following
                   </span>
                 </div>
               </div>

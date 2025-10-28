@@ -1,10 +1,10 @@
 import React from "react";
-import Daily from "./daily/page";
+import Creators from "./creators/page";
 
 const Learderboard = () => {
   return (
     <div>
-      <Daily />
+      <Creators />
     </div>
   );
 };
