@@ -21,6 +21,7 @@
   --accent-yellow-light: #fde047;
   --accent-pink: #ec4899;
   --accent-pink-light: #f472b6;
+  --accent-green: #16a34a;
 
   --text-color-one: #000000;
   --text-color-two: #ffffff;
@@ -49,6 +50,7 @@
   --accent-yellow-light: #fde047;
   --accent-pink: #ec4899;
   --accent-pink-light: #f472b6;
+  --accent-green: #4ade80;
 
   /* Dark mode text colors */
 
@@ -75,6 +77,7 @@
   --color-accent-orange-light: var(--accent-orange-light);
   --color-accent-pink: var(--accent-pink);
   --color-accent-pink-light: var(--accent-pink-light);
+  --color-accent-green: var(--accent-green);
 
   --color-text-color-one: var(--text-color-one);
   --color-text-color-two: var(--text-color-two);

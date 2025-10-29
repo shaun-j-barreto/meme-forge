@@ -135,7 +135,7 @@ const CreatorList = () => {
           return (
             <div
               key={index}
-              className={`card rounded-xs flex justify-between p-2 ${
+              className={`card rounded-xs flex justify-between opacity-85 hover:opacity-100 transition-transform ease-in-out duration-400 hover:scale-101 p-2 ${
                 index == 0
                   ? creatorStyle.gradients.legend
                   : index == 1
@@ -188,7 +188,7 @@ const CreatorList = () => {
                   <span className={`text-2xl font-bold ${creatorStyle.text}`}>
                     {listitem.totalReactions}
                   </span>
-                  <span className={`text-base font-bold ${creatorStyle.text}`}>
+                  <span className={`text-xs font-bold ${creatorStyle.text}`}>
                     Reactions
                   </span>
                 </div>
@@ -196,7 +196,7 @@ const CreatorList = () => {
                   <span className={`text-2xl font-bold ${creatorStyle.text}`}>
                     {listitem.totalPosts}
                   </span>
-                  <span className={`text-base font-bold ${creatorStyle.text}`}>
+                  <span className={`text-xs font-bold ${creatorStyle.text}`}>
                     Posts
                   </span>
                 </div>
@@ -204,7 +204,7 @@ const CreatorList = () => {
                   <span className={`text-2xl font-bold ${creatorStyle.text}`}>
                     {listitem.followers}
                   </span>
-                  <span className={`text-base font-bold ${creatorStyle.text}`}>
+                  <span className={`text-xs font-bold ${creatorStyle.text}`}>
                     Followers
                   </span>
                 </div>
@@ -212,7 +212,7 @@ const CreatorList = () => {
                   <span className={`text-2xl font-bold ${creatorStyle.text}`}>
                     {listitem.following}
                   </span>
-                  <span className={`text-base font-bold ${creatorStyle.text}`}>
+                  <span className={`text-xs font-bold ${creatorStyle.text}`}>
                     Following
                   </span>
                 </div>

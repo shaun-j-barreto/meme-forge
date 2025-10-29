@@ -16,7 +16,7 @@ const MemeCard = ({ memedata, page }) => {
       {memedata.map((meme, index) => (
         <div
           key={index}
-          className="meme-card border-4 border-background-border hover:border-background-four bg-card-background rounded-sm  overflow-hidden"
+          className="meme-card border-4 border-background-border hover:border-background-four bg-card-background rounded-sm overflow-hidden transition-transform ease-in-out duration-400 hover:scale-101"
         >
           <div className="meme-image-component relative rounded-xs overflow-hidden">
             <div className="absolute top-0 text-2xl w-full text-center p-2">

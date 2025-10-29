@@ -40,7 +40,7 @@ const StatCard = ({
   title: string;
   value: string | number;
 }) => (
-  <div className="bg-background-three rounded-xs flex flex-col relative overflow-hidden">
+  <div className="bg-background-three rounded-xs flex flex-col relative overflow-hidden opacity-85 hover:opacity-100 transition-transform ease-in-out duration-300 hover:scale-102">
     <div className="flex text-text-color-one text-2xl font-bold flex-row items-center justify-center py-4 gap-2 ">
       <span>{title}</span>
     </div>
