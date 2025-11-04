@@ -135,7 +135,7 @@ const CreatorList = () => {
           return (
             <div
               key={index}
-              className={`card rounded-xs flex justify-between opacity-85 hover:opacity-100 transition-transform ease-in-out duration-400 hover:scale-101 p-2 ${
+              className={`card rounded-xs flex justify-between opacity-85 hover:opacity-100 transition-transform ease-in-out duration-300 hover:scale-102 p-2 ${
                 index == 0
                   ? creatorStyle.gradients.legend
                   : index == 1

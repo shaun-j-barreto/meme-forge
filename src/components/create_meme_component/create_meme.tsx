@@ -48,10 +48,10 @@ const CreateMemeSection = () => {
           </div>
           <div className="flex flex-row gap-4">
             <button
-              className={`flex flex-3 flex-row gap-3 justify-center items-center mt-4 w-full ${BackgroundGradient} text-black cursor-pointer font-medium px-3 py-2 rounded-xs`}
+              className={`flex flex-3 flex-row gap-3 justify-center items-center mt-4 w-full text-text-color-two hover:text-text-color-one ${BackgroundGradient} cursor-pointer font-medium px-3 py-2 rounded-xs`}
             >
-              <SquarePlusIcon size={20} className="text-text-color-two" />
-              <span className="text-text-color-two">Create Meme</span>
+              <SquarePlusIcon size={20} />
+              <span>Create Meme</span>
             </button>
             <button className=" flex-1 rounded-xs mt-4 w-full bg-background-three text-text-color-one px-3 py-2 cursor-pointer hover:bg-accent-red-light hover:text-text-color-one">
               Cancel

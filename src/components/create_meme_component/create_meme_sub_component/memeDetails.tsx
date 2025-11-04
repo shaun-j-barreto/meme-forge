@@ -54,7 +54,7 @@ const MemeDetails = () => {
             />
             <button
               type="button"
-              className={`${BackgroundGradient} cursor-pointer font-medium px-4  rounded-xs py-2 text-text-color-two`}
+              className={`${BackgroundGradient} cursor-pointer font-medium px-4  rounded-xs py-2 text-text-color-two hover:text-text-color-one`}
               onClick={addTags}
             >
               Add

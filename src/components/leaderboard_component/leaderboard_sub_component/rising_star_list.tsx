@@ -109,7 +109,7 @@ const RisingStarList = () => {
       {mockData.map((star, index) => (
         <div
           key={index}
-          className="rounded-xs flex justify-between p-2 bg-background-three opacity-85 hover:opacity-100 transition-transform ease-in-out duration-400 hover:scale-101"
+          className="rounded-xs flex justify-between p-2 bg-background-three opacity-85 hover:opacity-100 transition-transform ease-in-out duration-300 hover:scale-102"
         >
           <div className="userinfo flex flex-row items-center gap-2">
             <div className="p-1 w-10 h-10 flex text-text-color-two border-2 border-background-border bg-background-four justify-center text-xl  font-bold items-center rounded-full">
