@@ -1,16 +1,14 @@
 @import "tailwindcss";
 
-/* Default theme → Light mode */
 :root[class="light"] {
-  --background: #f9fafb; /* Main background (light neutral) */
-  --background-two: #f1f3f6; /* Subtle contrast – for secondary sections */
-  --background-three: #e1e4e8; /* Stronger contrast – for cards or borders */
+  --background: #f9fafb;
+  --background-two: #f1f3f6;
+  --background-three: #e1e4e8;
   --background-four: #000000;
   --background-border: #ebebeb;
 
   --card-background: #f4f5f7;
 
-  /* Light mode accents */
   --accent-red: #ff6060;
   --accent-red-light: #f87171;
   --accent-blue: #18abcc;
@@ -26,7 +24,6 @@
   --text-color-one: #000000;
   --text-color-two: #ffffff;
   --text-color-three: #9ca3af;
-  /* Fonts */
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
@@ -51,8 +48,6 @@
   --accent-pink: #ec4899;
   --accent-pink-light: #f472b6;
   --accent-green: #4ade80;
-
-  /* Dark mode text colors */
 
   --text-color-one: #ffffff;
   --text-color-two: #000000;

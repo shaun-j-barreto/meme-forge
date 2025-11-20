@@ -2,13 +2,13 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { HomeIcon, Trophy, PlusIcon, AnvilIcon } from "lucide-react";
+import { HomeIcon, Trophy, PlusIcon, AnvilIcon, LogIn } from "lucide-react";
 import ProfileModal from "./profile_modal";
 import Image from "next/image";
 import { useState } from "react";
 import { BackgroundGradient } from "@/styles";
-
-const demoIMage = "https://i.pravatar.cc/100?img=32";
+import { useClerk, useUser } from "@clerk/nextjs";
+import { dark } from "@clerk/themes";
 
 const navlinks = [
   { href: "/homefeed", label: "Home", icon: <HomeIcon size={15} /> },
@@ -23,6 +23,9 @@ export default function Navbar() {
   const pathname = usePathname();
 
   const [isModalOpen, setIsModalOpen] = useState(false);
+  // const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const { openSignIn } = useClerk();
+  const { isSignedIn, user } = useUser();
 
   const toggleModal = () => {
     setIsModalOpen(!isModalOpen);
@@ -62,22 +65,43 @@ export default function Navbar() {
           </Link>
         ))}
       </div>
-      <div onClick={toggleModal} className="relative p-0.5 rounded-full">
-        <div
-          className={`absolute inset-0 ${BackgroundGradient} rounded-full`}
-        ></div>
-        <div className="relative bg-background p-0.5 rounded-full">
-          <Image
-            src={demoIMage}
-            alt="profile-image"
-            width={40}
-            height={40}
-            className="rounded-full object-cover"
-          />
-        </div>
+      {isSignedIn ? (
+        <div onClick={toggleModal} className="relative p-0.5 rounded-full">
+          <div
+            className={`absolute inset-0 ${BackgroundGradient} rounded-full`}
+          ></div>
+          <div className="relative bg-background p-0.5 rounded-full">
+            <Image
+              src={user?.imageUrl}
+              alt="profile-image"
+              width={40}
+              height={40}
+              className="rounded-full object-cover"
+            />
+          </div>
 
-        {isModalOpen && <ProfileModal onClose={() => setIsModalOpen(false)} />}
-      </div>
+          {isModalOpen && (
+            <ProfileModal onClose={() => setIsModalOpen(false)} />
+          )}
+        </div>
+      ) : (
+        <button
+          onClick={() =>
+            openSignIn({
+              appearance: {
+                baseTheme: dark,
+                variables: {
+                  colorBackground: "#1e2126",
+                },
+              },
+            })
+          }
+          className="cursor-pointer flex flex-row items-center gap-2 border border-background-border text-base bg-background-one rounded-xs text-text-color-one px-2 py-2 hover:bg-background-four hover:text-text-color-two"
+        >
+          <LogIn size={15} />
+          <div>Log in</div>
+        </button>
+      )}
     </nav>
   );
 }

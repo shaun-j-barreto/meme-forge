@@ -4,6 +4,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { Sun, Moon, LogOut, User } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { useTheme } from "next-themes";
+import { SignOutButton } from "@clerk/nextjs";
 
 const ProfileModal = ({ onClose }) => {
   const router = useRouter();
@@ -48,10 +49,12 @@ const ProfileModal = ({ onClose }) => {
 
           <span>Toggle Theme</span>
         </button>
-        <button className="cursor-pointer flex items-center gap-3 w-full px-4 py-2 rounded-xs bg-background text-text-color-one hover:bg-accent-red hover:text-text-color-two">
-          <LogOut size={20} />
-          <span>Logout</span>
-        </button>
+        <SignOutButton>
+          <button className="cursor-pointer flex items-center gap-3 w-full px-4 py-2 rounded-xs bg-background text-text-color-one hover:bg-accent-red hover:text-text-color-two">
+            <LogOut size={20} />
+            <span>Logout</span>
+          </button>
+        </SignOutButton>
       </div>
     </div>
   );
