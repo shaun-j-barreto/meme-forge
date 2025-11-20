@@ -12,7 +12,7 @@ import { BackgroundGradient } from "@/styles";
 
 const MemeCard = ({ memedata, page }) => {
   return (
-    <div className="grid  md:grid-cols-3 sm:grid-cols-1  gap-4 p-2">
+    <div className="grid lg:grid-cols-4  md:grid-cols-3 sm:grid-cols-1  gap-4 p-2">
       {memedata.map((meme, index) => (
         <div
           key={index}
@@ -88,7 +88,7 @@ const MemeCard = ({ memedata, page }) => {
               ))}
             </div>
           </div>
-          <div className="meme-reaction-info bg-background-three ">
+          <div className="meme-reaction-info bg-background-three">
             <div className="flex flex-row items-center gap-4 p-2">
               <div className="text-base text-text-color-one flex items-center gap-1">
                 <ThumbsUp fill="#ffbb73" color="black" size={20} />
